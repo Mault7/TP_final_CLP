@@ -31,7 +31,6 @@ use IEEE.NUMERIC_STD.ALL;
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
--
 entity Multiplicador_de_punto_flotante is
     Port ( x : in STD_LOGIC_VECTOR (31 downto 0);   --Factor X
            y : in STD_LOGIC_VECTOR (31 downto 0);   --factor Y 
@@ -162,8 +161,8 @@ begin
                     else 
                             z_mantissa := multiply_store(45 downto 23);
                             
-                            carry1 := '0';
-                            carry2 := '0';
+                            carry1 := '0';--reasignacion a cero
+                            carry2 := '0';--reasignacion a cero
                             
                             multiply_rounder(0) := multiply_store(22);
                             
